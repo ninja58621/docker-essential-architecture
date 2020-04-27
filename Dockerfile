@@ -3,7 +3,7 @@ MAINTAINER christopher.hoskin@gmail.com
 
 RUN apt-get update && apt-get install -y tomcat8 wget
 
-RUN wget https://www.enterprise-architecture.org/downloads_area/essentialinstall602.install
+RUN wget https://www.enterprise-architecture.org/downloads_area/essentialinstall62b.install
 
 RUN wget http://protege.stanford.edu/download/protege/3.5/installanywhere/Web_Installers/InstData/Linux_64bit/VM/install_protege_3.5.bin
 
