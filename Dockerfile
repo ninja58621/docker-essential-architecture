@@ -15,7 +15,7 @@ COPY auto-install.xml ./auto-install.xml
 RUN chmod u+x install_protege_3.5.bin
 #Unfortunately the installer appears to ignore the response file :(
 RUN ./install_protege_3.5.bin -f protege-response.txt
-RUN java -jar essentialinstall602.install auto-install.xml 
+RUN java -jar essentialinstall62b.install auto-install.xml 
 
 
 COPY server.xml /etc/tomcat9/
