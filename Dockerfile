@@ -19,15 +19,15 @@ RUN java -jar essentialinstall62b.install auto-install.xml
 
 
 COPY server.xml /etc/tomcat9/
-RUN mkdir /opt/static
+#RUN mkdir /opt/static
 
-COPY index.html /opt/static/
-RUN mv install_protege_3.5.bin /opt/static/
-RUN tar -C /opt/Essential\ Architecture\ Manager/ -czf /opt/static/essential_metamodel.tar.gz /opt/Essential\ Architecture\ Manager/essential_metamodel/
-RUN tar -C /root/Protege_3.5/plugins -czf /opt/static/plugins.tar.gz /root/Protege_3.5/plugins/com.enterprise_architecture.essential.*
+#COPY index.html /opt/static/
+#RUN mv install_protege_3.5.bin /opt/static/
+#RUN tar -C /opt/Essential\ Architecture\ Manager/ -czf /opt/static/essential_metamodel.tar.gz /opt/Essential\ Architecture\ Manager/essential_metamodel/
+#RUN tar -C /root/Protege_3.5/plugins -czf /opt/static/plugins.tar.gz /root/Protege_3.5/plugins/com.enterprise_architecture.essential.*
 
 
-USER tomcat9
+USER tomcat
 RUN mkdir /tmp/tomcat9-tomcat9-tmp
 #ENV JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server \
 #  -Xms1536m -Xmx1536m -XX:NewSize=256m -XX:MaxNewSize=256m \
