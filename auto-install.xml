@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <AutomatedInstallation langpack="eng">
 <com.izforge.izpack.panels.HTMLHelloPanel id="hellopanel"/>
-<com.izforge.izpack.panels.HTMLInfoPanel id="infopanel"/>
+<com.izforge.izpack.pfanels.HTMLInfoPanel id="infopanel"/>
 <com.izforge.izpack.panels.LicencePanel id="licencepanel"/>
 <com.izforge.izpack.panels.ImgPacksPanel id="packspanel">
 <pack index="0" name="Update Scripts" selected="true"/>
@@ -21,7 +21,7 @@
 <com.izforge.izpack.panels.UserInputPanel id="Plugins">
 <userInput>
 <entry key="PROTEGE_HOME" value="/root/Protege_3.5"/>
-<entry key="TOMCAT_HOME" value="/var/lib/tomcat8/webapps/"/>
+<entry key="TOMCAT_HOME" value="/var/lib/tomcat9/webapps/"/>
 </userInput>
 </com.izforge.izpack.panels.UserInputPanel>
 <com.izforge.izpack.panels.TargetPanel id="Repository">
@@ -32,7 +32,7 @@
 </com.izforge.izpack.panels.TargetPanel>
 <com.izforge.izpack.panels.UserInputPanel id="ImportUtility">
 <userInput>
-<entry key="IMPORT_UTILITY_HOME" value="/var/lib/tomcat8/webapps"/>
+<entry key="IMPORT_UTILITY_HOME" value="/var/lib/tomcat9/webapps"/>
 </userInput>
 </com.izforge.izpack.panels.UserInputPanel>
 <com.izforge.izpack.panels.UserInputPanel id="ServerThings">
