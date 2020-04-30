@@ -1,33 +1,14 @@
-FROM debian
+FROM tomcat:9.0
 MAINTAINER wuajf6rf9iul@opayq.com
 
-RUN apt-get update && apt-get install -y tomcat9 wget
+wget https://essential-cdn.s3.eu-west-2.amazonaws.com/viewer/essential_viewer_692.war
 
-#Cut Here
+wget https://essential-cdn.s3.eu-west-2.amazonaws.com/import-utility/essential_import_utility_22.war
 
-USER tomcat
-RUN mkdir /tmp/tomcat9-tomcat9-tmp
-#ENV JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server \
-#  -Xms1536m -Xmx1536m -XX:NewSize=256m -XX:MaxNewSize=256m \
-#  -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+DisableExplicitGC"
-CMD ["/usr/lib/jvm/default-java/bin/java", \
-"-Djava.util.logging.config.file=/var/lib/tomcat9/conf/logging.properties", \
-"-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager", \
-"-Djava.awt.headless=true", \
-"-Dfile.encoding=UTF-8", \
-"-server", \
-"-Xms1536m", \
-"-Xmx1536m", \
-"-XX:NewSize=256m", \
-"-XX:MaxNewSize=256m", \
-"-XX:PermSize=256m", \
-"-XX:MaxPermSize=256m", \
-"-XX:+DisableExplicitGC", \
-"-Djava.endorsed.dirs=/usr/share/tomcat9/endorsed", \
-"-classpath", "/usr/share/tomcat9/bin/bootstrap.jar:/usr/share/tomcat9/bin/tomcat-juli.jar", \
-"-Dcatalina.base=/var/lib/tomcat9", \
-"-Dcatalina.home=/usr/share/tomcat9", \
-"-Djava.io.tmpdir=/tmp/tomcat9-tomcat9-tmp", \
-"org.apache.catalina.startup.Bootstrap", \
-"start"]
+ADD essential_viewer_692.war /usr/local/tomcat/webapps/
 
+ADD essential_import_utility_22.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]
