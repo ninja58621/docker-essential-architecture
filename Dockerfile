@@ -3,29 +3,7 @@ MAINTAINER wuajf6rf9iul@opayq.com
 
 RUN apt-get update && apt-get install -y tomcat9 wget
 
-RUN wget https://www.enterprise-architecture.org/downloads_area/essentialinstall62b.install
-
-RUN wget http://protege.stanford.edu/download/protege/3.5/installanywhere/Web_Installers/InstData/Linux_64bit/VM/install_protege_3.5.bin
-
-RUN apt-get install -y libservlet3.1-java graphviz
-
-COPY protege-response.txt ./protege-response.txt 
-COPY auto-install.xml ./auto-install.xml
-
-RUN chmod u+x install_protege_3.5.bin
-#Unfortunately the installer appears to ignore the response file :(
-RUN ./install_protege_3.5.bin -f protege-response.txt
-RUN java -jar essentialinstall62b.install auto-install.xml 
-
-
-COPY server.xml /etc/tomcat9/
-#RUN mkdir /opt/static
-
-#COPY index.html /opt/static/
-#RUN mv install_protege_3.5.bin /opt/static/
-#RUN tar -C /opt/Essential\ Architecture\ Manager/ -czf /opt/static/essential_metamodel.tar.gz /opt/Essential\ Architecture\ Manager/essential_metamodel/
-#RUN tar -C /root/Protege_3.5/plugins -czf /opt/static/plugins.tar.gz /root/Protege_3.5/plugins/com.enterprise_architecture.essential.*
-
+#Cut Here
 
 USER tomcat
 RUN mkdir /tmp/tomcat9-tomcat9-tmp
