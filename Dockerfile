@@ -1,7 +1,7 @@
 FROM debian
 MAINTAINER wuajf6rf9iul@opayq.com
 
-RUN apt-get update && apt-get install -y tomcat8 wget
+RUN apt-get update && apt-get install -y tomcat9 wget
 
 RUN wget https://www.enterprise-architecture.org/downloads_area/essentialinstall602.install
 
@@ -27,7 +27,7 @@ RUN tar -C /opt/Essential\ Architecture\ Manager/ -czf /opt/static/essential_met
 RUN tar -C /root/Protege_3.5/plugins -czf /opt/static/plugins.tar.gz /root/Protege_3.5/plugins/com.enterprise_architecture.essential.*
 
 
-USER tomcat8
+USER tomcat
 RUN mkdir /tmp/tomcat8-tomcat8-tmp
 #ENV JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server \
 #  -Xms1536m -Xmx1536m -XX:NewSize=256m -XX:MaxNewSize=256m \
