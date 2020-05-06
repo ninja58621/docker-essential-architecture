@@ -1,7 +1,7 @@
-FROM debian
+FROM ubuntu
 MAINTAINER wuajf6rf9iul@opayq.com
 
-RUN apt-get update && apt-get install -y tomcat9 wget
+RUN apt-get update && apt-get install -y tomcat8 wget
 
 RUN wget https://www.enterprise-architecture.org/downloads_area/essentialinstall602.install
 
