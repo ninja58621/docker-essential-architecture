@@ -6,7 +6,7 @@ MAINTAINER wuajf6rf9iul@opayq.com
 #Download and Install Required Pre-Requisites
 
 #GraphViz
-RUN apt-get install -y libservlet3.1-java graphviz
+#RUN apt-get install -y libservlet3.1-java graphviz
 
 #Protege 3.5
 RUN wget http://protege.stanford.edu/download/protege/3.5/installanywhere/Web_Installers/InstData/Linux_64bit/VM/install_protege_3.5.bin
