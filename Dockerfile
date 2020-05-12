@@ -1,6 +1,6 @@
 FROM tomcat:9.0
 MAINTAINER wuajf6rf9iul@opayq.com
-
+#Instructions: https://www.enterprise-architecture.org/os_download.php
 #From Tomcat to manage tomcat install
 
 #Download and Install Required Pre-Requisites
@@ -18,6 +18,15 @@ RUN wget http://protege.stanford.edu/download/protege/3.5/installanywhere/Web_In
   
 #JDBC Drivers
   #This is the standalone install, so we won't be using them
+
+#Widgets
+
+#Meta-Model
+
+#Viewer
+
+#Import-Utility
+
 
 
 
